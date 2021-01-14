@@ -4,7 +4,6 @@ CS315 Programming Languages Term Project
 **Project Members:**
   - Ahmet Ayberk Yılmaz
   - Denizhan Kemeröz
-  - Mustafa Tuna Acar
   - Süleyman Semih Demir
 
 # Description
