@@ -1,0 +1,33 @@
+BEGIN
+string ssid = “aether_drone”;
+str password = “”; 
+call connectComputer(ssid, password);
+call up(500);
+int altitude = call readAltitude();
+while(altitude >= 300)
+{
+		call down(100);
+		altitude = altitude - 100;
+}
+call turnLeft(90); ~~turn left 90 degrees.
+call forward(200); ~~go forward 200 cm.
+double temperature = call readTemperature();
+
+if(temperature <= 20.5 && call readAcceleration() > 10)
+{
+		call toggleCamera();
+		call takePicture();
+}
+else
+{
+		int input;
+		read (input);
+		call up (input);
+		string output = "Altitude is ";
+		print(output + call readAltitude());
+}
+while( call readAltitude() != 0)
+{
+		call down(1);
+}
+END

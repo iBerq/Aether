@@ -1,0 +1,118 @@
+takeoff
+
+~~This is an example program for Aether language.
+
+const int ci = 10;
+const double cd = 9.7;
+const str cs = "abc";~~constant string declaration
+const char cc = 'a';
+const boolean cb = true;
+const time ct = 10:15:59;
+
+int i1;
+i1 = 5;
+int i2 = 10;
+int i3 = i1 + i2;
+i3 = i1 + i2;
+i3 = i1 * 5;
+i3 = 15 / 3 * (12^(4 * i1 + 17)) - (i1 + i2);~~declartion with all type of arithmetic operation
+int i1 = i2;
+i1 = i2;
+
+double d1;
+d1 = 5.1;
+double d2 = 5.2;
+double d3 = d1 + d2;
+d3 = d1 + d2;
+d3 = d1 + 5.3;
+d3 = 17.3 + 12.4 * (d1 - d2);
+double d1 = d2;
+d1 = d2;
+
+str s1;
+s1 = "s1";
+str s2 = "s2";
+str s3 = s1 + s2;
+s3 = s1 + s2;
+s3 = s1 + "def";
+s3 = "def" + "abc";
+str s1 = s2;
+s1 = s2;
+
+char c1;
+c1 = 'a';
+char c2 = 'b';
+char c1 = c2;
+c1 = c2;
+
+boolean b1;
+b1 = true;
+boolean b2 = false;
+boolean b3 = b1 + b2;
+boolean b1 = b2;
+b1 = b2;
+
+time t1;
+t1 = 15:13:03;
+time t2 = 16:51:45;
+time t3 = t2 - t1;
+t3 = t1 + t2;
+t3 = t1 + 05:12:25;
+t3 = 17:00:09 - 12:15:17;
+time t1 = t2;
+t1 = t2;
+
+function int anyFunction (int a, str b)
+{
+	i1 = 10;
+	s1 = "abc";
+	return a;
+};
+
+if ( call anyFunction() == 10 && call readInclination() == 1012 )
+{
+	str anyStr = "abcdefg";
+	char anyChar = 'a';
+};
+
+if (call readInclination() == 1012)
+{
+	pressure = 5
+}
+else
+{
+	call up(10)
+};
+
+~~call all functions which are already defined to the language
+call readInclination();
+call readAltitude();
+call readTemperature();
+call readAcceleration();
+call toggleCamera();
+call takePicture();
+call readTime();
+call connectComputer("id","password");
+call up(100);
+call down(200);
+int i;
+read(i);
+print(i);
+
+~~two for loops
+for(int i = 10; i >= 0; i = i - 1)
+{
+	for(int j = 10; j >= 0; j = i - 1)
+	{
+		print(i)
+	}
+};
+
+~~while loop
+int i = 0;
+while (i != 15 && i > 0)
+{
+	i = i + 1
+};
+
+land

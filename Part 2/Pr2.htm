@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>CS 315: Project 2</TITLE>
+   <meta charset="UTF-8">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; SunOS 5.5 sun4m) [Netscape]">
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fz1fs1bq_tFzuMpZOvsQ_iMxoM5MQUHkriQS8dwr_Fy7fXF2LLzND97x6dMf_gxn6HJrJrBkUTTefOJmGNM84zpmKJrvua6PUbaQF6wTSEg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL3d3dy5jcy5iaWxrZW50LmVkdS50ci9-Z3V2ZW5pci9jb3Vyc2VzL0NTMzE1L1ByMi5odG0"/></HEAD>
+<BODY BGCOLOR=White>
+
+<P><LINK REV=MADE HREF="MAILTO:guvenir@cs.bilkent.edu.tr"><!-- OWNER_INFO="H. Altay Guvenir" --></P>
+
+<H1><B><FONT COLOR="#000080">CS 315</FONT><BR>
+<FONT COLOR=RED>Project 2</FONT></B></H1>
+
+<P>
+<HR>
+<B>
+Assigned: Oct. 25, 2020<BR>
+<FONT COLOR=RED>Due: Nov. 1, 2020 23:59</FONT>
+</B>
+
+<H2><FONT COLOR=Blue>Parser for a Programming Language for Drones</FONT></H2>
+
+<P>
+The second project builds on your language design of the first project. 
+This project involves building a parser for your design using the <code>yacc</code> tool. 
+Please refer to the description of <A HREF="Pr1.htm">Project 1</A> 
+for the requirements for your programming language design. 
+There are some minor changes, please read carefully the instructions below. 
+
+<H3>Part A - Revised and Augmented Language Design (20 points)</H3>
+
+The requirements for the language are the same as Project 1 except for a few minor extensions. 
+You can use as much of your previous design work as you can. 
+However, if you have not already done so, you should incorporate the following
+elements into your design for the second part of the project:
+<UL>
+	<LI>main program statements (beginning of the execution),</LI>
+	<LI>declarations (variables, constants etc.),</LI>
+	<LI>assignment statement,</LI>
+	<LI>Conditional (selection) statements,</LI>
+	<LI>Loop Statements,</LI>
+	<LI>Input (from a file or keyboard) and output (to a file or console) statements,</LI>
+	<LI>function definition and function call statements.</LI>
+</UL>
+
+<P>
+Please note that there is no single correct answer. 
+This is a design project. As long as your language is consistent, unambiguous
+and it makes sense with respect to the specifications given above, it is fine.
+However, it is expected to be readable, writable and reliable, as much as possible.</P>
+
+<H3>Part B - Implementing the Parser (60 points)</H3>
+
+<P>For the second project, you are required to implement a
+parser using the <code>yacc</code> tool. The parser reads the source code of a
+program, written in your programming language from an input file. 
+If the source code represents a valid program in your programming language, 
+the parser should print out a message indicating the acceptance of the input 
+(e.g. "Input program is valid"). Otherwise, the parser should print out 
+an error message indicating the line number of the source code that contains 
+the error (e.g. "Syntax error on line **!" where ** will be the line number 
+of the source program at which the error was detected).</P>
+
+<P>You should use the lexical analyzer that was developed in the project, 
+but you may have to modify it; for example, to count line numbers. 
+Also, the lexical analyzer will return tokens, instead of printing messages.</P>
+
+<P><B>VERY IMPORTANT NOTE</B>: <UL>
+<LI>Your <code>yacc</code> and <code>lex</code> specification files must compile 
+in the <code>dijkstra.cs.bilkent.edu.tr</code> machine;
+otherwise, you will receive 0 from Part B.
+<LI>You should strive to eliminate ALL conflicts and ambiguities in your language, 
+modifying your grammar if necessary. 
+You will need to provide unquestionably convincing arguments for any conflicts 
+that are left in your final submission.
+</UL>
+
+<H3>Part C - Example Program (10 points)</H3>
+
+<P>Finally, you have to submit a test program written in your language, 
+that exercises all of the core features, required in the project. 
+You can reuse the test program from your first project, 
+but note that you have to make sure to revise it according to the changes 
+you made in your grammar.</P>
+
+<P><B>VERY IMPORTANT NOTE</B>: If you do not submit a test program, we
+will have no way of evaluating your parser, hence you will receive a 0
+from Part C!
+
+<H3>Part D - Peer Grading (10 points)</H3>
+You will be working with the same group you worked for Project 1.
+Since this is a team project, each member is expected to put about the same amount of work into the project. 
+However, sometimes this is not the case. The remaining 10 points of your grade will come from the peer grading.
+Each member will evaluate him/herself and other members of the team.
+We will use the PeAs (Peer Assessment) tool for peer evaluations and self-evaluations 
+to assess how effectively each member contributed to the team.
+You will receive an email message from this system.
+You should enter your evaluations just before submitting your project.
+If you did not submit your evaluations to the PeAs system, your peer grade will be 0.
+
+<H2>Logistics</H2>
+There are two parts that you will hand in before the due date of the project.
+<OL>
+  <LI>A project report (in PDF format) including the following components:
+  <UL>
+    <LI>Title page with your <B>group name and ID</B> as well as <B>names, IDs
+    and sections</B> for all of the project group members.
+    <LI>The complete BNF description of your language (based on the
+    terminal symbols returned by your lex implementation)
+    <LI>General description of the structure of your language and
+    those nonterminals that you think are important. Try to make the
+    life of the grading assistant as easy as possible by making sure
+    that somebody reading your report can understand and parse through
+    a program written in your language. Make sure to note all
+    rules adopted by your language (i.e. precedence rules and
+    other ways in which ambiguities were resolved).
+    <LI>Descriptions of how each nontrivial token used in your grammar.
+    <LI>A thorough explanation of every conflict left unresolved in
+    your final submission. Ideally, you should strive to eliminate all
+    conflicts with no warnings or conflict errors given by yacc on
+    your specification file.
+  </UL>
+
+  <LI>Your lex and yacc description files, together with the example
+  programs described above, written in your language. Specifically, do
+  the following:</LI>
+  <UL>
+    <LI>Create a folder named <B>CS315f20_teamXX</B> where XX will be your group number.
+    <LI>Copy the following files into this directory:
+    <UL>
+      <LI>The project report (in PDF format).
+      <LI><B>CS315f20_teamXX.lex</B> : Your lex specification file.
+      <LI><B>CS315f20_teamXX.yacc</B> : Your yacc specification file.
+      <LI><B>CS315f20_teamXX.test</B> : Your example program.
+      <LI>a <B>Makefile</B> that produces your complete parser with an
+      executable called <B>parser</B> in the <code>dijkstra.cs.bilkent.edu.tr</code> machine. 
+      Check that when you type <B>make</B> in the same directory the desired executable is generated.
+      <LI>Before you proceed with the next step, you should delete all
+      other files in this directory using the Unix <B>rm</B>
+      command. BE CAREFUL, do not remove your lex and yacc files. MAKE FREQUENT BACKUPS.
+    </UL>
+    <LI>Compress this folder into a single file using tools such as zip or rar.
+  </UL>
+</OL>
+
+<H2>Submission</H2>
+
+<P>Please upload the zip (or rar) file you created to 
+Moodle (<u>CS 315 (All Sections) Programming Languages</u>) before the due date. 
+<EM>Late submissions will be accepted, with 20 points (out of 100) deduction for each extra day.</EM>. 
+
+<P><FONT color=red><B>If your submission does not adhere to the above guidelines, points will be deducted. <br>
+Make sure you have correct file naming.<br>
+Your parser must compile and run on <font color=navy><code>dijkstra.cs.bilkent.edu.tr</code></font>. 
+The evaluation of your parser will be done only on this machine.
+</B></FONT>
+
+<HR>
+</BODY>
+</HTML>
